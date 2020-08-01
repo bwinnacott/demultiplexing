@@ -5,15 +5,16 @@
 
 | File name | label |
 |---|---|
-| 1294_S1_L008_R1_001.fastq.gz |  |
-| 1294_S1_L008_R2_001.fastq.gz |  |
-| 1294_S1_L008_R3_001.fastq.gz |  |
-| 1294_S1_L008_R4_001.fastq.gz |  |
+| 1294_S1_L008_R1_001.fastq.gz | read1 |
+| 1294_S1_L008_R2_001.fastq.gz | index1 |
+| 1294_S1_L008_R3_001.fastq.gz | index2 |
+| 1294_S1_L008_R4_001.fastq.gz | read2 |
 
 2. Per-base NT distribution
-    1. Use markdown to insert your 4 histograms here.
-    2. ```Your answer here```
-    3. ```Your answer here```
+    1. ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/read1.png?raw=true)
+    2. ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/index1.png?raw=true)
+    3. ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/index2.png?raw=true)
+    4. ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/read2.png?raw=true)
     
 ## Part 2
 1. Define the problem
