@@ -18,8 +18,16 @@
        
     2.
     
-    3. Command: ls -1 1294_S1_L008_R[23].001.fastq.gz | while read line; do echo $line; zcat $line | sed -n "2~4p" | grep 'N' | wc -l; done
+    3. Command: 
+    
+       ```ls -1 1294_S1_L008_R[23].001.fastq.gz | while read line; do echo $line; zcat $line | sed -n "2~4p" | grep 'N' | wc -l; done```
+       
        Output: 
+       
+       ```1294_S1_L008_R2_001.fastq.gz
+          3976613
+          1294_S1_L008_R3_001.fastq.gz
+          3328051```
     
 ## Part 2
 1. Define the problem
