@@ -18,7 +18,8 @@
        
     2.
     
-    3.
+    3. Command: ls -1 1294_S1_L008_R[23].001.fastq.gz | while read line; do echo $line; zcat $line | sed -n "2~4p" | grep 'N' | wc -l; done
+       Output: 
     
 ## Part 2
 1. Define the problem
