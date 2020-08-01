@@ -12,9 +12,13 @@
 
 2. Per-base NT distribution
     1. ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/read1.png?raw=true)
-    2. ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/index1.png?raw=true)
-    3. ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/index2.png?raw=true)
-    4. ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/read2.png?raw=true)
+       ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/index1.png?raw=true)
+       ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/index2.png?raw=true)
+       ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/read2.png?raw=true)
+       
+    2.
+    
+    3.
     
 ## Part 2
 1. Define the problem
