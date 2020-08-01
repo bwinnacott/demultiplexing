@@ -60,7 +60,7 @@ def convert_phred(character):
 
     return variable
 
-##### Beginning of program (most likely will break down into additional functions) #####
+##### Beginning of program (pseudocode might be too specific; most likely will break down into additional functions) #####
 
 -Generate index dictionaries (from function 'generate_index_dictionaries'); one ('index_dict') to reference for writing to output files and check if 
 index read is known; the other ('permutations_dict') to keep count of instances of read pairs (matched and unmatched)
@@ -82,15 +82,19 @@ index read is known; the other ('permutations_dict') to keep count of instances 
             -add 1 to line counter; continue to next line
         -elif the current line is quality scores (modulo):
             -append quality score lines to lists holding record info
-            -if 'swapped' or 'unknown' is True:
-                -write out full records to either index-hopped or unknown output files (depending on 'swapped' or 'unknown' designation)
-                -reset swapped or unknown variables
-            -else check average quality score of indexes (iterate over string and use 'convert_phred' function):
-                -if avg score is < min threshold:
-                    -increment unknown counter; output records info to unknown files
-                -else increment matched counter; output records info to file specific to current matched index pair
+            -if 'swapped' is True:
+                -check if avg quality score is at least cutoff (iterate over string and use 'convert_phred' function):
+                    -if at least one index is not, change 'swapped' to False, change 'unknown' to True; decrement swapped counter; increment 
+                    unknown counter
+                    -if both are at least cutoff; write out full records to index-hopped output files
+            -if 'unknown' is True:
+                -output records info to unknown files
+            -if matched indexes:
+                -check if avg quality score is at least cutoff (iterate over string and use 'convert_phred' function):
+                    -if at least one index is not; increment unkown counter; write out full records to unknown output files
+                    -if both are of quality, increment matched counter; write out records to index specific matched files
             -add 1 to line counter
-            -reset record lists
+            -reset record lists and index category variables
         -else:
             -append the current line for each read file to their respective lists
             -add 1 to line counter
