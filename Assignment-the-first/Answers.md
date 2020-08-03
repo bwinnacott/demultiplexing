@@ -22,8 +22,8 @@
     index sequences are of high quality due to their importance in assigning reads to their correct libraries. If misassignment occurs, downstream analysis 
     can be compromised. It may even be more prudent to apply a Q30 cutoff for each individual base call in each index sequence. However, this might remove
     an excess of good data that can support further analysis. For biological reads, a slightly lower quality score cutoff might be appropriate, such as Q25, to 
-    retain more sequence information, without compromising quality. Having higher coverage with shorter read sequencing experiments provides overlap which 
-    can resolve consensus sequences and error correct. 
+    retain more sequence information, without compromising quality. Having higher coverage with short read sequencing experiments provides overlap which 
+    can resolve consensus sequences and error correct, justifying a lower cutoff.
     ```
     
     3. Command: 
