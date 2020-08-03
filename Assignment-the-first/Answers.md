@@ -17,6 +17,14 @@
        ![](https://github.com/2020-bgmp/demultiplexing-bwinnacott/blob/master/plots/read2.png?raw=true)
        
     2.
+    ```
+    An appropriate average quality score cutoff for the index sequences is at least Q30 (1 in 1,000 probability of incorrect base call). We want to make sure the 
+    index sequences are of high quality due to their importance in assigning reads to their correct libraries. If misassignment occurs, downstream analysis 
+    can be compromised. It may even be more prudent to apply a Q30 cutoff for each individual base call in each index sequence. However, this might remove
+    an excess of good data that can support further analysis. For biological reads, a slightly lower quality score cutoff might be appropriate, such as Q25, to 
+    retain more sequence information, without compromising quality. Having higher coverage with shorter read sequencing experiments provides overlap which 
+    can resolve consensus sequences and error correct. 
+    ```
     
     3. Command: 
     
