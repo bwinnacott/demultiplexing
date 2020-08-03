@@ -17,6 +17,9 @@ def convert_phred(letter):
     return score
 
 def mean_qscore_distribution():
+    '''Calculates the mean quality score for each base position across all reads in the dataset. Utilizes
+    a numpy array for storing rolling sums for each position. If '--index' is specified at the command
+    line, an array of length 8 is generated and populated, else an array of length 101.'''
     if args.index:
         position_array = np.zeros(8,dtype=int)
     else:
@@ -39,6 +42,7 @@ def mean_qscore_distribution():
     return position_array
 
 def plot_distribution(array):
+    '''Plots the mean quality score distributions generated from 'mean_qscore_distribution' function.'''
     plt.bar(range(len(array)),array)
     plt.xlabel('Base Position')
     plt.ylabel('Mean Quality Score')
