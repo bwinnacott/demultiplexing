@@ -35,6 +35,9 @@
     
 ## Part 2
 1. Define the problem
+   ```
+   Multiplexing is used to generate sequencing data for multiple libraries simultaneously on a single flow cell. This is accomplished using adapters containing        unique index sequences (barcodes) that map reads back to their respective libraries. To accomplish this, a technique called demultiplexing is applied, which bins reads based on their index information. However, a phenomenon known as index hopping can arise from sequencing runs that utilize multiplexing. This occurs most frequently on patterned flow cells where the library fragment from one well anneals to a different fragment (w/different index) in another nearby well. Additionally, having excess free floating adapters in solution can increase the chances of index hopping. If not accounted for, this can result in complications in downstream analysis. For this assignment, our goal is to demultiplex paired end sequencing data that may have experienced index misassignment. 
+   ```
 2. Describe output
 3. Upload your [4 input FASTQ files](../TEST-input_FASTQ) and your [4 expected output FASTQ files](../TEST-output_FASTQ).
 4. Pseudocode
