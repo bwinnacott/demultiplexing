@@ -45,10 +45,25 @@
     data that may have experienced index misassignment. 
     ```
 2. Describe output
+   ```
+   Output from demultiplexing consists of fastq files that contain categorized reads from the original raw fastq files. Two reads for each unique
+   index (forward and reverse) will be generated, as well as two additional output files (forward and reverse) for each of the remaining index categories:
+   index swapped and low quality/unknown indexes. For this assignment, a total of 52 output fastq files will be generated (24 unique indexes x 2 = 48 + 2
+   (swapped) = 50 + 2 (low quality/unknown) = 52).
+   ```
 3. Upload your [4 input FASTQ files](../TEST-input_FASTQ) and your [4 expected output FASTQ files](../TEST-output_FASTQ).
+   ```
+   See ../TEST-input_FASTQ and ../TEST-input_FASTQ
+   ```
 4. Pseudocode
+   ```
+   See pseudocode.txt
+   ```
 5. High level functions. For each function, be sure to include:
     1. Description/doc string
     2. Function headers (name and parameters)
     3. Test examples for individual functions
     4. Return statement
+   ```
+   See pseudocode.txt
+   ```
