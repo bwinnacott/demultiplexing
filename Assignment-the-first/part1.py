@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 parser = argparse.ArgumentParser(prog='mean_qscore_position',description='Generates a distribution of mean qscores by base position across records.')
 parser.add_argument('-f','--in_file',type=str,action='store',help='Specifies input fastq file.')
 parser.add_argument('-o','--out_plot',type=str,action='store',help='Specifies output filename for plot.')
-parser.add_argument('-l','--length',action='store',help='Specifies sequence length found in input files.')
+parser.add_argument('-l','--length',type=int,action='store',help='Specifies sequence length found in input files.')
 args = parser.parse_args()
 
 def convert_phred(letter):
