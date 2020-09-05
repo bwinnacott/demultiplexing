@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 parser = argparse.ArgumentParser(prog='mean_qscore_position',description='Generates a distribution of mean qscores by base position across records.')
 parser.add_argument('-f','--in_file',type=str,action='store',help='Specifies input fastq file.')
 parser.add_argument('-o','--out_plot',type=str,action='store',help='Specifies output filename for plot.')
-parser.add_argument('--index',default=False,action='store_true',help='Specifies whether or not input file (-f) is an index file.')
+parser.add_argument('-l','--length',action='store',help='Specifies sequence length found in input files.')
 args = parser.parse_args()
 
 def convert_phred(letter):
@@ -18,12 +18,8 @@ def convert_phred(letter):
 
 def mean_qscore_distribution():
     '''Calculates the mean quality score for each base position across all reads in the dataset. Utilizes
-    a numpy array for storing rolling sums for each position. If '--index' is specified at the command
-    line, an array of length 8 is generated and populated, else an array of length 101.'''
-    if args.index:
-        position_array = np.zeros(8,dtype=int)
-    else:
-        position_array = np.zeros(101,dtype=int)
+    a numpy array for storing rolling sums for each position. Numpy array length specified at command line call.'''
+    position_array = np.zeros(args.length,dtype=int)
     LN = 1
     with gzip.open(args.in_file,'rt') as f:
         for line in f:
