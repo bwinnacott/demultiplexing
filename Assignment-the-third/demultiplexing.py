@@ -136,7 +136,7 @@ def write_out_record(read1_record,read2_record,index_dict,swapped=False,unknown=
             files[0].write(line + '\n')
         for line in read2_record:
             files[1].write(line + '\n')
-    # if 'unknown' is set to True, write out records to mismatched files
+    # if 'unknown' is set to True, write out records to unknown files
     elif unknown:
         files = index_dict['unknown']
         for line in read1_record:
@@ -235,7 +235,7 @@ def parse_files(index_reference,swapped_permutations,dual_matched_dict,cutoff,me
                     else:
                         total_unknown += 1
                         write_out_record(read_forward,read_reverse,index_reference,unknown=True)
-                        # decrement previously recorded occurrence in swapped permutation dictionary (no longer considered matched; instead
+                        # decrement previously recorded occurrence in matched permutation dictionary (no longer considered matched; instead
                         # considered unknown)
                         index_perm = re.search(r'[A-Z]+-[A-Z]+',read_forward[0])
                         dual_matched_dict[tuple(index_perm.group().split('-'))] -= 1
