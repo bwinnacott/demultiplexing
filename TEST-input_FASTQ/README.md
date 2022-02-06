@@ -1,1 +1,1 @@
-Please upload your 4 input test FASTQ files to this directory. Make sure they are *properly formatted* FASTQ files.
+This directory contains example fastq files for testing purposes. Index and fastq files are specified in the filenames.
