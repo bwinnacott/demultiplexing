@@ -1,1 +1,1 @@
-Please upload your 4 expected output test FASTQ files to this directory. Make sure they are *properly formatted* FASTQ files.
+This directory contains example output matching the files in the example input directory. Records with matching indexes, swapped indexes, and unknown indexes are contained in separate files.
